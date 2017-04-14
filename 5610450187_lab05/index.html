@@ -1,0 +1,177 @@
+<!-- Thanatchaporn Sri-art 5610450187 sec200 -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Web Forms</title>
+<meta charset="utf-8">
+
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+
+</head>
+<body>
+<center>
+    <form id="theForm" style="display:block;" action="" method="">
+    <h1><i>Please Fill The Information</i></h1>
+        <div class="row">
+            <label for="f_name">Firstname:</label>
+           <input type="text" name="f_name" id="f_name" onkeypress='return (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122) || (event.charCode>=161 && event.charCode<=255) || (event.charCode>=3585 && event.charCode<=3675)' value=" "><br><br>
+        </div>
+        <div class="row">
+           <label for="l_name">Lastname:</label>
+           <input type="text" name="l_name" id="l_name" onkeypress='return (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122) || (event.charCode>=161 && event.charCode<=255) || (event.charCode>=3585 && event.charCode<=3675)' value=" "><br><br>
+        </div>
+        <div class ="row">
+          <label for="date">Birthday:</label>
+          <input type="text" name="date" id="date" onkeypress='return event.charCode >= 47 && event.charCode <= 57' placeholder="DD/MM/YYYY"><br><br>
+        </div>
+        <div class="row">
+        <label for="gender">Gender:</label>
+     	<input type="radio" name="gender" value="male" checked> Male
+     	<input type="radio" name="gender" value="female"> Female
+     	<br><br>
+     	</div>
+
+        <div class="row">
+        <label for="province">Province:</label>
+        <select name= "prov_name" id="prov_name">
+        <option value="Bangkok">จังหวัดกรุงเทพมหานคร</option>  
+        <option value="Krabi">จังหวัดกระบี่</option>   
+        <option value="Kanchanaburi">จังหวัดกาญจนบุรี</option>
+        <option value="Kalasin">จังหวัดกาฬสินธุ์</option>
+        <option value="KamphaengPhet">จังหวัดกำแพงเพชร</option>
+        <option value="KhonKaen">จังหวัดขอนแก่น</option>
+        <option value="Chanthaburi">จังหวัดจันทบุรี</option>
+        <option value="Chachoengsao">จังหวัดฉะเชิงเทรา</option>
+        <option value="Chonburi">จังหวัดชลบุรี</option>
+        <option value="Chainat">จังหวัดชัยบาท</option>
+        <option value="Chaiyaphum">จังหวัดชัยภูมิ</option>
+        <option value="Chumphon">จังหวัดชุมพร</option>
+        <option value="ChiangRai">จังหวัดเชียงราย</option>
+        <option value="ChiangMai">จังหวัดเชียงใหม่</option>
+        <option value="Trang">จังหวัดตรัง</option>
+        <option value="Trat">จังหวัดตราด</option>
+        <option value="Tak">จังหวัดตาก</option>
+        <option value="NakhonNayok">จังหวัดนครนายก</option>
+        <option value="NakhonPathom">จังหวัดนครปฐม</option>
+        <option value="NakhonPhanom">จังหวัดนครพนม</option>
+        <option value="NakhonRatchasima">จังหวัดนครราชสีมา</option>
+        <option value="NakhonSiThammarat">จังหวัดนครศรีธรรมราช</option>
+        <option value="NakhonSawan">จังหวัดนครสวรรค์</option>
+        <option value="Nonthaburi">จังหวัดนนทบุรี</option>
+        <option value="Narathiwat">จังหวัดนราธิวาส</option>
+        <option value="Nan">จังหวัดน่าน</option>
+        <option value="BuengKan">จังหวัดบึงกาฬ</option>
+        <option value="Buriram">จังหวัดบุรีรีมย์</option>
+        <option value="PathumThani">จังหวัดปทุมธานี</option>
+        <option value="PrachuapKhiriKhan">จังหวัดประจวบคิริขันธ์</option>
+        <option value="Prachinburi">จังหวัดปราจีนบุรี</option>
+        <option value="Pattani">จังหวัดปัตตานี</option>
+        <option value="PhraNakhonSiAyutthaya ">จังหวัดพระนครศรีอยุธยา</option>
+        <option value="Phayao">จังหวัดพะเยา</option>
+        <option value="PhangNga">จังหวัดพังงา</option>
+        <option value="Phatthalung">จังหวัดพัทลุง</option>
+        <option value="Phichit">จังหวัดพิจิตร</option>
+        <option value="Phitsanulok">จังหวัดพิษณุโลก</option>
+        <option value="Phetchaburi">จังหวัดเพชรบุรี</option>
+        <option value="Phetchabun">จังหวัดเพชนบูรณ์</option>
+        <option value="Phrae">จังหวัดแพร่</option>
+        <option value="Phuket">จังหวัดภูเก็ต</option>
+        <option value="MahaSarakham">จังหวัดมหาสารคาม</option>
+        <option value="Mukdahan">จังหวัดมุกดาหาร</option>
+        <option value="MaeHongSon">จังหวัดแม่ฮ่องสอน</option>
+        <option value="Yasothon">จังหวัดยโสธร</option>
+        <option value="Yala">จังหวัดยะลา</option>
+        <option value="RoiEt">จังหวัดร้อยเอ็ด</option>
+        <option value="Ranong">จังหวัดระนอง</option>
+        <option value="Rayong">จังหวัดระยอง</option>
+        <option value="Ratchaburi">จังหวัดราชบุรี</option>
+        <option value="Lopburi">จังหวัดลพบุรี</option>
+        <option value="Lampang">จังหวัดลำปาง</option>
+        <option value="Lamphun">จังหวัดลำพูน</option>
+        <option value="Loei">จังหวัดเลย</option>
+        <option value="Sisaket">จังหวัดศรีสะเกษ</option>
+        <option value="SakonNakhon">จังหวัดสกลนคร</option>
+        <option value="Songkhla">จังหวัดสงขลา</option>
+        <option value="Satun">จังหวัดสตูล</option>
+        <option value="SamutPrakan">จังหวัดสมุทรปราการ</option>
+        <option value="SamutSongkhram">จังหวัดสมุทรสงคราม</option>
+        <option value="SamutSakhon">จังหวัดสมุทรสาคร</option>
+        <option value="SaKaeo">จังหวัดสระแก้ว</option>
+        <option value="Saraburi">จังหวัดสระบุรี</option>
+        <option value="SingBuri">จังหวัดสิงห์บุรี</option>
+        <option value="Sukhothai">จังหวัดสุโขทัย</option>
+        <option value="SuphanBuri">จังหวัดสุพรรณบุรี</option>
+        <option value="SuratThani">จังหวัดสุราษฎร์ธานี</option>
+        <option value="Surin">จังหวัดสุรินทร์</option>
+        <option value="NongKhai">จังหวัดหนองคาย</option>
+        <option value="NongBuaLamphu">จังหวัดหนองบัวลำภู</option>
+        <option value="AngThong">จังหวัดอ่างทอง</option>
+        <option value="AmnatCharoen">จังหวัดอำนาจเจริญ</option>
+        <option value="UdonThani">จังหวัดอุดรธานี</option>
+        <option value="Uttaradit">จังหวัดอุตรดิตถ์</option>
+        <option value="UthaiThani">จังหวัดอุทัยธานี</option>
+        <option value="UbonRatchathani">จังหวัดอุบลราชธานี</option>
+
+
+        </select>
+        </div>
+
+        <div class="button">
+        <button type="button" onclick="callServer()" value="Submit" id="submitButton">Submit</button>
+        <input type="button" onclick="resetStorage()" value="Cancel" id="cancelButton">
+
+        </div>
+    </form>
+</center>
+
+<div class="content" id="content" style="display: none" >
+
+<h2>คำขวัญประจำจังหวัด</h2>
+<center><div id="pic"></div></center>
+<h3 id="paragraph"></h3>
+</div>
+</body>
+</html>
+
+<script src="jquery-3.1.1.js" ></script>
+
+<script type="text/javascript">
+
+
+function calculateAge(birthday) { // birthday is a date
+    var ageDifMs = Date.now() - birthday.getTime();
+    var ageDate = new Date(ageDifMs); // miliseconds from epoch
+    console.log(Math.abs(ageDate.getUTCFullYear() - 1970));
+    return Math.abs(ageDate.getUTCFullYear() - 1970);
+}
+
+function callServer(){
+  
+    var getDate = $("#date").val().split("/");
+    var birthString = new Date(getDate[2], getDate[1] - 1, getDate[0]);
+
+            $.ajax({
+                type: 'POST',
+                dataType:"json",
+                url: 'server.php',
+                data:{
+                    "age" : calculateAge(new Date(birthString)),
+                    "gender":$('input[name=gender]:checked').val(),
+                    "province":$("#prov_name").val()
+                },
+                success: function(data) {
+                    alert(data[0]);
+                    document.body.style.backgroundImage = "url('"+data[1]+"')";
+                    // document.getElementById("content").style.fontFamily = "Impact,Charcoal,sans-serif";
+                    document.getElementsByTagName("body")[0].style.fontFamily ="Comic Sans MS";
+                    $("#paragraph").text(data[2]);
+                    $('#pic').prepend('<img src="'+data[4]+'" />');
+                    $(".content").css("display", "block");
+                    $("#theForm").css("display", "none");
+                },
+
+            });
+        }
+
+</script>
