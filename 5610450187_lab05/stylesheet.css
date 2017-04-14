@@ -1,0 +1,91 @@
+/*Thanatchaporn Sri-art 5610450187 sec200*/
+html {
+	margin: 0;
+	padding: 0;
+	}
+body {
+    background-image: url("Frozen-Street-Background.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+    font-family: "Palatino Linotype", "Book Antiqua", "Palatino", serif;
+    font-size:150%;
+
+}
+h1{
+	padding-top: 120px;
+}
+h2{
+    font-size: 280%;
+}
+#theform{
+	display: block;
+	padding: 5px;
+	content: 100px;
+}
+.row{
+	display: table-row;
+}
+.row label{
+	display: table-cell;
+	padding: 10px;
+	text-align: right;
+	color: black;
+}
+.row input{
+	display: table-cell;
+    padding: 5px;
+}
+.row select{
+	padding: 5px;
+}
+.button{
+	padding-left:50px;
+}
+.button input{
+    background-color: #FFF;
+    border: none;
+    color: #673918;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-style: ridge;
+}
+.button button{
+    background-color: #FFF;
+    border: none;
+    color: #673918;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-style: ridge;
+}
+
+.button button:hover {
+	background-color: #ace057;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#cancelButton:hover{
+    background-color: #FFA4A4;
+}
+
+
+.content{
+    display:block; 
+    padding-top: 30px;
+    width:100%; 
+    text-align: center;
+}
