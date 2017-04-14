@@ -1,0 +1,132 @@
+<!-- Thanatchaporn Sri-art 5610450187 sec200 -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Complete Forms</title>
+
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+<!-- <link rel="stylesheet" type="text/css" media="(max-width:400px)"> -->
+</head>
+
+<body>
+<h1>PERSONAL INFORMATION</h1>
+  <form id="theForm" action="" method="">
+
+    <div class="row">
+        <label for="f_name">Firstname:</label>
+       <p name="f_name" id="f_name"></p>
+       <label for="l_name">Lastname:</label>
+       <p name="l_name" id="l_name"></p>
+    </div>
+
+    <div class="row">
+      <label for="houseno">House number:</label>
+      <p name="houseno" id="houseno"></p>
+      <label for="street">Street:</label>
+      <p name="street" id="street"></p>
+      </div>
+
+      <div class="row">
+      <label for="city">City:</label>
+      <p name="city" id="city"></p><br><br>
+      </div>
+
+      <div class="row">
+      <label for="province">Province:</label>
+      <p name="province" id="province"></p>
+      <label for="zipcode">Zipcode:</label>
+      <p name="zipcode" id="zipcode" ></p><br><br>
+    </div>
+
+    <div class="row">
+      <label for="phoneno"> Phone number:</label>
+        <p name="phonecode" id="phonecode" value=""></p>
+        <p name="phoneno" id="phoneno" value=""></p><br><br>
+    </div>
+
+    <div class="row">
+      <label for="cellphoneno"> Cell phone number:</label>
+        <p name="cellphonecode" id="cellphonecode" value=""></p>
+        <p name="cellphoneno" id="cellphoneno" value=""></p><br><br>
+    </div>
+
+    <div class ="row">
+      <label for="date">Birthday:</label>
+      <p name="date" id="date"></p><br><br>
+      <label for="date">Birthday of week:</label>
+      <p name="week" id="week" value=""></p>     
+  <br><br>
+    </div>
+
+    <div class="row">
+      <label for="citizen"> Citizenship number:</label>
+      <p name="citizen" id="citizen"></p><br><br>
+    </div>
+
+    <div class ="row">
+      <label for="zodiac_s"> Zodiac Sign:</label>
+      <p name="zodiac_s" id="zodiac_s" value=""></p>     
+      <label for="zodiac_y"> Zodiac Year:</label>
+      <p name="zodiac_y" id="zodiac_y" value=""></p>     
+    </div>
+
+  </form>
+
+</body>
+</html>
+
+<script type="text/javascript">
+	document.addEventListener("DOMContentLoaded", function(event) {
+		// document.getElementById("f_name").innerHTML = getCookie("f_name");
+		// document.getElementById("l_name").innerHTML = getCookie("l_name");
+    document.getElementById("f_name").innerHTML = getUrlVars()["f_name"];
+    document.getElementById("l_name").innerHTML = getUrlVars()["l_name"];
+		document.getElementById("houseno").innerHTML = getUrlVars()["houseno"];
+    document.getElementById("street").innerHTML = getUrlVars()["street"];
+    document.getElementById("city").innerHTML = getUrlVars()["city"];
+    document.getElementById("province").innerHTML = getUrlVars()["province"];
+    document.getElementById("zipcode").innerHTML = getUrlVars()["zipcode"];
+    
+    var pc = getUrlVars()["phonecode"];
+    var pcList = pc.split("%2B");
+    document.getElementById("phonecode").innerHTML = "+"+pcList[1]+getUrlVars()["phoneno"];
+    
+    var cpc = getUrlVars()["cellphonecode"];
+    var cpcList = cpc.split("%2B");
+    document.getElementById("cellphonecode").innerHTML = "+"+cpcList[1]+getUrlVars()["cellphoneno"];
+    
+    var res = getUrlVars()["date"];
+    var birthdate = res.split("%2F");
+    document.getElementById("date").innerHTML =  birthdate[0]+"/"+birthdate[1]+"/"+birthdate[2];
+    
+    document.getElementById("week").innerHTML = getUrlVars()["week"];
+    document.getElementById("zodiac_s").innerHTML = getUrlVars()["zodiac_s"];
+    document.getElementById("zodiac_y").innerHTML = getUrlVars()["zodiac_y"];
+    document.getElementById("citizen").innerHTML = getUrlVars()["citizen"];
+	});
+
+	function getCookie(cookieName) {
+	    var name = cookieName + "=";
+	    var decodedCookie = decodeURIComponent(document.cookie);
+	    var ca = decodedCookie.split(';');
+	    for(var i = 0; i < ca.length; i++) {
+	        var c = ca[i];
+	        while (c.charAt(0) == ' ') {
+	            c = c.substring(1);
+	        }
+	        if (c.indexOf(name) == 0) {
+	            return c.substring(name.length, c.length);
+	        }
+	    }
+	    return "";
+	}
+
+	function getUrlVars() {
+		var vars = {};
+		var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+			vars[key] = value;
+			});
+		return vars;
+	}
+
+</script>
