@@ -1,0 +1,204 @@
+<!-- Thanatchaporn Sri-art 5610450187 sec200 -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Web Forms</title>
+
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+<link rel="stylesheet" type="text/css" media="(max-width:400px)">
+</head>
+
+<body>
+<div class="content">
+<h1>PERSONAL INFORMATION</h1>
+<body>
+  <form id="theForm" action="completeForms.html" method="GET">
+
+    <div class="row">
+        <label for="f_name">Firstname:</label>
+       <input type="text" name="f_name" id="f_name" onkeypress='return (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122) || (event.charCode>=161 && event.charCode<=255) || (event.charCode>=3585 && event.charCode<=3675)' value=" "><br><br>
+       <label for="l_name">Lastname:</label>
+       <input type="text" name="l_name" id="l_name" onkeypress='return (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122) || (event.charCode>=161 && event.charCode<=255) || (event.charCode>=3585 && event.charCode<=3675)' value=" "><br><br>
+    </div>
+    <div class="row">
+   
+      <label for="houseno">House number:</label>
+
+      <input type="text" name="houseno" id = "houseno" value=" "><br><br>
+      <label for="street">Street:</label>
+      <input type="text" name="street" id="street">
+      </div>
+
+      <div class="row">
+      <label for="city">City:</label>
+        <input type="text" name="city" id="city" value=" "><br><br>
+      </div>
+
+      <div class="row">
+      <label for="province">Province:</label>
+      <input type="text" name="province" id="province">
+      <label for="zipcode">Zipcode:</label>
+      <input type="text" name="zipcode" id="zipcode" value=" "><br><br>
+    </div>
+
+    <div class="row">
+      <label for="phoneno"> Phone number:</label>
+        <input type="text" name="phonecode" id="phonecode" onkeypress='return event.charCode >= 48 && event.charCode <= 57' value="+662" style="width: 30px" >
+        <input type="text" name="phoneno" id="phoneno" onkeypress='return event.charCode >= 48 && event.charCode <= 57' value=""  maxlength="7"><br><br>
+    </div>
+
+    <div class="row">
+      <label for="cellphoneno"> Cell phone number:</label>
+        <input type="text" name="cellphonecode" id="cellphonecode" onkeypress='return event.charCode >= 48 && event.charCode <= 57'  value="+66" style="width: 30px">
+        <input type="text" name="cellphoneno" id="cellphoneno" onkeypress='return event.charCode >= 48 && event.charCode <= 57'  value="" maxlength="8"><br><br>
+    </div>
+
+    <div class ="row">
+      <label for="date">Birthday:</label>
+      <input type="text" name="date" id="date" onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder="DD/MM/YYYY"><br><br>
+      <label for="dateofWeek">Birthday of week:</label>
+      <select name= "week" id="week">
+      <option value="sun">Sunday</option>      
+      <option value="mon">Monday</option>
+      <option value="tue">Tuesday</option>
+      <option value="wed">Wednesday</option>
+      <option value="thu">Thursday</option>
+      <option value="fri">Friday</option>
+      <option value="sat">Saturday</option>
+      </select>
+      <br><br>
+    </div>
+
+    <div class="row">
+      <label for="citizen"> Citizenship number:</label>
+        <input type="text" name="citizen" id="citizen" onkeypress='return event.charCode >= 48 && event.charCode <= 57' value="" maxlength="13"><br><br>
+    </div>
+
+    <div class ="row">
+      <label for="zodiac_s"> Zodiac Sign:</label>
+      <select name="zodiac_s" id="zodiac_s">
+      <option value="aries">Aries</option>      
+      <option value="taurus">Taurus</option>
+      <option value="gemini">Gemini</option>
+      <option value="cancer">Cancer</option>
+      <option value="leo">Leo</option>
+      <option value="virgo">Virgo</option>
+      <option value="libra">Libra</option>
+      <option value="scorpio">Scorpio</option>
+      <option value="sagittarius">Sagittarius</option>
+      <option value="capricorn">Capricorn</option>
+      <option value="aquarius">Aquarius</option>
+      <option value="pisces">Pisces</option>
+      </select>
+      <label for="zodiac_y"> Zodiac Year:</label>
+      <select name="zodiac_y" id="zodiac_y">
+      <option value="rat">Rat</option>      
+      <option value="ox">Ox</option>
+      <option value="tiger">Tiger</option>
+      <option value="rabbit">Rabbit</option>
+      <option value="dragon">dragon</option>
+      <option value="snake">snake</option>
+      <option value="horse">Horse</option>
+      <option value="goat">goat</option>
+      <option value="monkey">Monkey</option>
+      <option value="rooster">Rooster</option>
+      <option value="dog">Dog</option>
+      <option value="pig">Pig</option>
+      </select>
+    </div>
+
+    <div class="button">
+      <input type="button" onclick="saveCookie()" value="Save">
+      <input type="button" onclick="resetStorage()" value="Cancel" id="cancelButton">
+      <input type="submit" onclick="checkCookie()" value="Submit">
+    </div>
+  </form>
+
+  </body>
+
+</html>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function(event) { 
+  document.getElementById("f_name").value = localStorage.getItem("f_name")==""? "":localStorage.getItem("f_name");
+  document.getElementById("l_name").value = localStorage.getItem("l_name")==""? "":localStorage.getItem("l_name");
+  document.getElementById("houseno").value = localStorage.getItem("houseno")==""? "":localStorage.getItem("houseno");
+  document.getElementById("street").value = localStorage.getItem("street")==""? "":localStorage.getItem("street");
+  document.getElementById("city").value = localStorage.getItem("city")==""? "":localStorage.getItem("city");
+  document.getElementById("province").value = localStorage.getItem("province")==""? "":localStorage.getItem("province");
+  document.getElementById("zipcode").value = localStorage.getItem("zipcode")==""? "":localStorage.getItem("zipcode");
+  document.getElementById("phoneno").value = localStorage.getItem("phoneno")==""? "":localStorage.getItem("phoneno");
+  document.getElementById("cellphoneno").value = localStorage.getItem("cellphoneno")==""? "":localStorage.getItem("cellphoneno");
+  document.getElementById("week").value = localStorage.getItem("week")==""? "":localStorage.getItem("week");
+  document.getElementById("citizen").value = localStorage.getItem("citizen")==""? "":localStorage.getItem("citizen");
+  document.getElementById("zodiac_s").value = localStorage.getItem("zodiac_s")==""? "":localStorage.getItem("zodiac_s");
+  document.getElementById("zodiac_y").value = localStorage.getItem("zodiac_y")==""? "":localStorage.getItem("zodiac_y");
+  document.getElementById("date").value = localStorage.getItem("date")==""? "":localStorage.getItem("date");
+});
+
+
+function setLocalStorage(itemName,itemValue) {
+  localStorage.setItem(itemName,itemValue);
+
+}
+
+function saveCookie(){
+  setLocalStorage("f_name", document.getElementById("f_name").value);
+  setLocalStorage("l_name", document.getElementById("l_name").value);
+  setLocalStorage("houseno", document.getElementById("houseno").value);
+  setLocalStorage("street", document.getElementById("street").value);
+  setLocalStorage("city", document.getElementById("city").value);
+  setLocalStorage("province", document.getElementById("province").value);
+  setLocalStorage("zipcode", document.getElementById("zipcode").value);
+  setLocalStorage("phoneno", document.getElementById("phoneno").value);
+  setLocalStorage("cellphoneno", document.getElementById("cellphoneno").value);
+  setLocalStorage("week", document.getElementById("week").value);
+  setLocalStorage("citizen", document.getElementById("citizen").value);
+  setLocalStorage("zodiac_s", document.getElementById("zodiac_s").value);
+  setLocalStorage("zodiac_y", document.getElementById("zodiac_y").value);
+  setLocalStorage("date", document.getElementById("date").value);
+
+}
+
+function resetStorage(){
+  location.reload();
+  localStorage.clear();
+  localStorage.removeItem(week);
+  localStorage.removeItem(zodiac_s);
+  localStorage.removeItem(zodiac_y);
+}
+
+function setCookie(cname,cvalue,exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=file:///";
+}
+
+function getCookie(f_name) {
+    var name = f_name + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function checkCookie() {
+  var fname = document.getElementById("f_name").value;
+  var lname = document.getElementById("l_name").value;
+  alert("Welcome "+fname+" "+lname);
+  setCookie("f_name",fname,1);
+  setCookie("l_name",lname,1);
+  submit();
+}
+
+</script>
